@@ -5,13 +5,17 @@ threadsafe: false
 api_version: 1
 
 handlers:
-- url: /(.*\.(gif|png|jpg|ico|js|css))
+- url: /(.*\.(gif|png|jpg|ico|js|css|ttf|eot))
   static_files: \1
-  upload: (.*\.(gif|png|jpg|ico|js|css))
+  upload: (.*\.(gif|png|jpg|ico|js|css|ttf|eot))
 
 - url: /robots.txt
   static_files: robots.txt
   upload: robots.txt 
+
+- url: /uky
+  static_files: uky.html
+  upload: uky.html 
 
 - url: .*
   script: main.py
